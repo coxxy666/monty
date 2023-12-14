@@ -30,7 +30,7 @@ struct stack_s *next;
 } stack_t;
 
 
-extern stack_t *stackHead;
+extern stack_t *Head;
 
 /**
  * struct instruction_s - opcode and its function
@@ -163,7 +163,7 @@ stack_t *createNode(int value);
 /**
  * freeStackNodes - Frees nodes in the stack.
  */
-void freeStackNodes(void);
+void freeNode(void);
 
 /**
  * addToQueue - Adds a node to the queue.

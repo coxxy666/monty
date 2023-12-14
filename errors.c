@@ -42,7 +42,7 @@ break;
 default:
 break;
 }
-free_nodes();
+freeNode();
 exit(EXIT_FAILURE);
 }
 
@@ -83,7 +83,7 @@ break;
 default:
 break;
 }
-free_nodes();
+freeNode();
 exit(EXIT_FAILURE);
 }
 
@@ -111,7 +111,7 @@ break;
 default:
 break;
 }
-free_nodes();
+freeNode();
 exit(EXIT_FAILURE);
 }
 

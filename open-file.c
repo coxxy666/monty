@@ -90,6 +90,7 @@ instruction_t func_list[] = {
 {"pall", printStack},
 {"pint", printTop},
 {"pop", popTop},
+{"doNothing",doNothing},
 {"swap", swapNodes},
 {"add", addNodes},
 {"sub", subNodes},
@@ -155,7 +156,6 @@ func(&node, ln);
 if (format == 1)
 addToQueue(&node, ln);
 }
-else
-func(&head, ln);
+
 }
 

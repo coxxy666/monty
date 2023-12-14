@@ -1,6 +1,6 @@
 #include "monty.h"
 
-stack_t *stackHead = NULL;
+stack_t *Head = NULL;
 
 /**
  * main - entry point
@@ -16,7 +16,7 @@ fprintf(stderr, "USAGE: monty file\n");
 exit(EXIT_FAILURE);
 }
 openFile(argumentValues[1]);
-freeStackNodes();
+freeNode();
 return (0);
 }
 
@@ -39,19 +39,19 @@ return (node);
 }
 
 /**
- * freeStackNodes - Frees nodes in the stack.
+ * freeNode - Frees nodes in the stack.
  */
-void freeStackNodes(void)
+void freeNode(void)
 {
 stack_t *tmp;
 
-if (stackHead == NULL)
+if (Head == NULL)
 return;
 
-while (stackHead != NULL)
+while (Head != NULL)
 {
-tmp = stackHead;
-stackHead = stackHead->next;
+tmp = Head;
+Head = Head->next;
 free(tmp);
 }
 }
@@ -67,12 +67,12 @@ stack_t *tmp;
 
 if (newNode == NULL || *newNode == NULL)
 exit(EXIT_FAILURE);
-if (stackHead == NULL)
+if (Head == NULL)
 {
-stackHead = *newNode;
+Head = *newNode;
 return;
 }
-tmp = stackHead;
+tmp = Head;
 while (tmp->next != NULL)
 tmp = tmp->next;
 
