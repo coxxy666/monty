@@ -1,5 +1,7 @@
 #include "monty.h"
 
+stack_t *stackHead = NULL;
+
 /**
  * addToStack - Adds a node to the stack.
  * @newNode: Pointer to the new node.
@@ -72,4 +74,4 @@ if (stack == NULL || *stack == NULL)
 more_err(6, lineNumber);
 printf("%d\n", (*stack)->n);
 }
-ZZ
+

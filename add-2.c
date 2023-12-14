@@ -6,6 +6,7 @@
  * @lineNumber: Integer representing the line number of the opcode.
  */
 void doNothing(stack_t **stack, unsigned int lineNumber)
+
 {
 (void)stack;
 (void)lineNumber;
