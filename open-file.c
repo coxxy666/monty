@@ -90,7 +90,7 @@ instruction_t func_list[] = {
 {"pall", printStack},
 {"pint", printTop},
 {"pop", popTop},
-{"doNothing",doNothing},
+{"doNothing", doNothing},
 {"swap", swapNodes},
 {"add", addNodes},
 {"sub", subNodes},
@@ -131,6 +131,8 @@ err(3, ln, opcode);
  */
 void callFunction(op_func func, char *op, char *val, int ln, int format)
 {
+
+stack_t *head ;
 stack_t *node;
 int flag;
 int i;
@@ -156,6 +158,7 @@ func(&node, ln);
 if (format == 1)
 addToQueue(&node, ln);
 }
-
+else
+func(&head, ln);
 }
 

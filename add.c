@@ -1,6 +1,6 @@
 #include "monty.h"
 
-stack_t *stackHead = NULL;
+
 
 /**
  * addToStack - Adds a node to the stack.
@@ -9,19 +9,22 @@ stack_t *stackHead = NULL;
  */
 void addToStack(stack_t **newNode, __attribute__((unused))unsigned int lnNu)
 {
+
+stack_t *Head = NULL;
+
 stack_t *tmp;
 
 if (newNode == NULL || *newNode == NULL)
 exit(EXIT_FAILURE);
-if (stackHead == NULL)
+if (Head == NULL)
 {
-stackHead = *newNode;
+Head = *newNode;
 return;
 }
-tmp = stackHead;
-stackHead = *newNode;
-stackHead->next = tmp;
-tmp->prev = stackHead;
+tmp = Head;
+Head = *newNode;
+Head->next = tmp;
+tmp->prev = Head;
 }
 
 /**
