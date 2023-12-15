@@ -132,7 +132,7 @@ err(3, ln, opcode);
 void callFunction(op_func func, char *op, char *val, int ln, int format)
 {
 
-stack_t *head ;
+stack_t *head;
 stack_t *node;
 int flag;
 int i;
